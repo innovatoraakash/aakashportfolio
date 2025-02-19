@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+
 import '/components/hireme_card.dart';
 import '/components/section_title.dart';
 import '/constants.dart';
 import '/models/RecentWork.dart';
-
 import 'components/recent_work_card.dart';
 
 class RecentWorkSection extends StatelessWidget {
+  const RecentWorkSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(

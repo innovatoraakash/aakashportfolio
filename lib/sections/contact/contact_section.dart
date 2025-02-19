@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+
 import '/components/default_button.dart';
 import '/components/section_title.dart';
 import '/constants.dart';
-
 import 'components/socal_card.dart';
 
 class ContactSection extends StatelessWidget {
+  const ContactSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +22,7 @@ class ContactSection extends StatelessWidget {
         ),
       ),
       child: Column(
-        children:  [
+        children: [
           SizedBox(height: kDefaultPadding * 2.5),
           SectionTitle(
             title: "Contact Me",
@@ -36,8 +38,8 @@ class ContactSection extends StatelessWidget {
 
 class ContactBox extends StatelessWidget {
   const ContactBox({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -87,8 +89,8 @@ class ContactBox extends StatelessWidget {
 
 class ContactForm extends StatelessWidget {
   const ContactForm({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

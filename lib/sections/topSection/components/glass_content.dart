@@ -19,8 +19,9 @@ class GlassContent extends StatelessWidget {
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Container(
-          padding:  EdgeInsets.symmetric(horizontal: kDefaultPadding * 2),
-          constraints: BoxConstraints(maxWidth: 1110, maxHeight: size.height * 0.7),
+          padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 2),
+          constraints:
+              BoxConstraints(maxWidth: 1110, maxHeight: size.height * 0.7),
           width: double.infinity,
           color: Colors.white.withOpacity(0),
           child: Column(
@@ -29,12 +30,15 @@ class GlassContent extends StatelessWidget {
             children: [
               Text(
                 "Hello There!",
-                style: Theme.of(context).textTheme.headline5?.copyWith(color: Colors.white),
+                style: Theme.of(context)
+                    .textTheme
+                    .titleSmall
+                    ?.copyWith(color: Colors.white),
               ),
-               Text(
+              Text(
                 "Aakash \nGhimire",
                 style: TextStyle(
-                  fontSize: kFeedBackText*5,
+                  fontSize: kFeedBackText * 5,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                   height: 1.5,
@@ -42,7 +46,10 @@ class GlassContent extends StatelessWidget {
               ),
               Text(
                 "Flutter Developer",
-                style: Theme.of(context).textTheme.headline5?.copyWith(color: Colors.white),
+                style: Theme.of(context)
+                    .textTheme
+                    .titleSmall
+                    ?.copyWith(color: Colors.white),
               )
             ],
           ),

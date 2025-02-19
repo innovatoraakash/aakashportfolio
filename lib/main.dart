@@ -1,15 +1,20 @@
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import '/constants.dart';
-import '/home_screen.dart';
+// import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
+
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sizer/sizer.dart';
 
+import '/constants.dart';
+import '/home_screen.dart';
 import 'utils/scroll_behaviour.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -26,8 +31,7 @@ class MyApp extends StatelessWidget {
           inputDecorationTheme: kDefaultInputDecorationTheme,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        
-        home: NeumorphicApp(themeMode: ThemeMode.light, home: HomeScreen()),
+        home: HomeScreen(),
       );
     });
   }

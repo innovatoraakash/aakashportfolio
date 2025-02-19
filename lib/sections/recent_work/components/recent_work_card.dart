@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '/models/RecentWork.dart';
 
+import '/models/RecentWork.dart';
 import '../../../constants.dart';
 
 class RecentWorkCard extends StatefulWidget {
@@ -54,7 +54,10 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                       SizedBox(height: kDefaultPadding / 2),
                       Text(
                         recentWorks[widget.index].title,
-                        style: Theme.of(context).textTheme.headline5!.copyWith(height: 1.5),
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleSmall!
+                            .copyWith(height: 1.5),
                       ),
                       SizedBox(height: kDefaultPadding),
                       const Text(

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import '/constants.dart';
 
+import '/constants.dart';
 import 'components/logo_blur_box.dart';
 import 'components/menu.dart';
 import 'components/person_pic.dart';
 
 class TopSection extends StatelessWidget {
+  const TopSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

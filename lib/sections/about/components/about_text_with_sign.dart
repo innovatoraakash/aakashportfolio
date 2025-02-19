@@ -44,7 +44,10 @@ class AboutTextWithSign extends StatelessWidget {
                 child: Text(
                   "About Me",
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline2!.copyWith(fontWeight: FontWeight.bold, color: Colors.black, fontSize: log(2.w) * 16),
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      fontSize: log(2.w) * 16),
                 ),
               ),
               Image.asset(

@@ -43,11 +43,13 @@ class SectionTitle extends StatelessWidget {
               children: [
                 Text(
                   subTitle,
-                  style: const TextStyle(fontWeight: FontWeight.w200, color: kTextColor),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w200, color: kTextColor),
                 ),
                 Text(
                   title,
-                  style: Theme.of(context).textTheme.headline2!.copyWith(fontWeight: FontWeight.bold, color: Colors.black),
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                      fontWeight: FontWeight.bold, color: Colors.black),
                 )
               ],
             )

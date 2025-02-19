@@ -41,5 +41,5 @@ setDefaultValuesForMobile() {
   kDefaultPaddingDesktop = 12.0;
   hiremeCardOffset = 30.0;
   feedbackBaseSize = 70.0;
-  kFeedBackText  = 12.0;
+  kFeedBackText = 12.0;
 }
