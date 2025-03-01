@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 class DefaultButton extends StatelessWidget {
@@ -9,12 +10,11 @@ class DefaultButton extends StatelessWidget {
   });
 
   final String imageSrc, text;
-  final Function press;
-
+final void Function()? press;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: press(),
+      onPressed: press,
       child: Padding(
         padding: EdgeInsets.symmetric(
           vertical: 16,

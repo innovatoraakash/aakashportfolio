@@ -9,7 +9,7 @@ class MyOutlineButton extends StatelessWidget {
   });
 
   final String imageSrc, text;
-  final Function press;
+  final void Function() press;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class MyOutlineButton extends StatelessWidget {
             horizontal: 12,
           ),
         ),
-        onPressed: press(),
+        onPressed: press,
         child: Row(
           children: [
             Image.asset(

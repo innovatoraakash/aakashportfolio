@@ -19,8 +19,9 @@ dependencies:
   sizer: 
   responsive_framework: 
   flutter_neumorphic_plus: 
-  flutter_gen: ^5.9.0
-  flutter_riverpod: ^2.6.1
+  flutter_gen: 
+  flutter_riverpod: 
+  url_launcher: 
 
 dev_dependencies:
   build_runner: ^2.4.15

@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '/components/default_button.dart';
 import '/components/my_outline_button.dart';
@@ -84,13 +86,22 @@ class AboutSection extends StatelessWidget {
               MyOutlineButton(
                 imageSrc: "assets/images/hand.png",
                 text: "Hire Me!",
-                press: () {},
+                press: () {
+                  final Uri emailUri = Uri(
+                    scheme: 'mailto',
+                    path: 'ghimiresky2@gmail',
+                  );
+                  launchUrl(emailUri);
+                },
               ),
               SizedBox(width: kDefaultPadding * 1.5),
               DefaultButton(
                 imageSrc: "assets/images/download.png",
                 text: "Download CV",
-                press: () {},
+                press: () {
+                  launchUrlString(
+                      "https://drive.usercontent.google.com/uc?id=1znaV4GyOMcWhtWU8pOreAL-DX3NqDZcw&export=download");
+                },
               ),
             ],
           ),
