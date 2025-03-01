@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
-
 class MyOutlineButton extends StatelessWidget {
   const MyOutlineButton({
-    Key? key,
+    super.key,
     required this.imageSrc,
     required this.text,
     required this.press,
-  }) : super(key: key);
+  });
 
   final String imageSrc, text;
   final Function press;
@@ -23,8 +21,8 @@ class MyOutlineButton extends StatelessWidget {
           ),
           side: const BorderSide(color: Color(0xFFEDEDED)),
           padding: EdgeInsets.symmetric(
-            vertical: kDefaultPadding,
-            horizontal: kDefaultPadding * 2.5,
+            vertical: 16,
+            horizontal: 12,
           ),
         ),
         onPressed: press(),
@@ -34,7 +32,7 @@ class MyOutlineButton extends StatelessWidget {
               imageSrc,
               height: 40,
             ),
-            SizedBox(width: kDefaultPadding),
+            SizedBox(width: 8),
             Text(text)
           ],
         ),

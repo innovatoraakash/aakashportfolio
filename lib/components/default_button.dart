@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class DefaultButton extends StatelessWidget {
   const DefaultButton({
-    Key? key,
+    super.key,
     required this.imageSrc,
     required this.text,
     required this.press,
-  }) : super(key: key);
+  });
 
   final String imageSrc, text;
   final Function press;
@@ -14,23 +14,25 @@ class DefaultButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      // style:ButtonStyle (
-      // padding: EdgeInsets.symmetric(
-      //   vertical: kDefaultPadding,
-      //   horizontal: kDefaultPadding * 2.5,
-      // ),
-      // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-      // backgroundColor: Color(0xFFE8F0F9),
-      // ) ,
       onPressed: press(),
-      child: Row(
-        children: [
-          Image.asset(
-            imageSrc,
-            fit: BoxFit.scaleDown,
-          ),
-          Text(text),
-        ],
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          vertical: 16,
+          // horizontal: 12,
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(
+              height: 30,
+              width: 30,
+              imageSrc,
+              fit: BoxFit.scaleDown,
+            ),
+            SizedBox(width: 8),
+            Text(text),
+          ],
+        ),
       ),
     );
   }

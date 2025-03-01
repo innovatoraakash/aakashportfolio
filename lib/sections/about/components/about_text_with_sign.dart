@@ -7,8 +7,8 @@ import '../../../constants.dart';
 
 class AboutTextWithSign extends StatelessWidget {
   const AboutTextWithSign({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -35,26 +35,18 @@ class AboutTextWithSign extends StatelessWidget {
               ),
             ],
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "About Me",
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                      fontSize: log(2.w) * 16),
-                ),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                "About Me",
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontSize: log(2.w) * 16),
               ),
-              Image.asset(
-                "assets/images/sign.png",
-                fit: BoxFit.scaleDown,
-              )
-            ],
+            ),
           ),
         ),
       ),
